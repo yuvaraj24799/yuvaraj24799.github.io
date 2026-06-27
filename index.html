@@ -536,14 +536,7 @@ const observer=new IntersectionObserver((entries)=>{
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-// contact form
-document.getElementById('contact-form').addEventListener('submit',function(e){
-  e.preventDefault();
-  const success=document.getElementById('form-success');
-  success.style.display='block';
-  this.reset();
-  setTimeout(()=>{success.style.display='none';},4000);
-});
+// form handled by Formspree — no JS needed
 </script>
 
 </body>
