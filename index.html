@@ -55,7 +55,7 @@ nav{position:fixed;top:2px;left:0;right:0;z-index:100;background:var(--nav-bg);b
 .hero-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,111,247,0.08) 0%,transparent 70%);top:-100px;right:-100px;animation:glow-pulse 6s ease-in-out infinite}
 @keyframes glow-pulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
-.hero-grid{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;width:100%}
+.hero-grid{display:flex;flex-direction:row;gap:48px;align-items:center;width:100%;justify-content:space-between}
 
 .status-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-bg);border:1px solid var(--green-border);border-radius:999px;padding:5px 14px 5px 10px;font-size:11px;color:var(--green);font-family:'JetBrains Mono',monospace;margin-bottom:24px;opacity:0;animation:fade-up .6s ease forwards .2s}
 .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2.5s ease-in-out infinite}
@@ -76,7 +76,7 @@ h1{font-size:clamp(36px,5vw,56px);font-weight:700;line-height:1.08;letter-spacin
 .btn-outline:hover{background:var(--bg3);color:var(--text);border-color:var(--border3);transform:translateY(-1px)}
 
 /* PHOTO */
-.photo-wrap{width:220px;height:268px;border-radius:20px;overflow:hidden;border:1px solid var(--border2);flex-shrink:0;position:relative;opacity:0;animation:fade-left .8s ease forwards .5s}
+.photo-wrap{width:220px;height:268px;border-radius:20px;overflow:hidden;border:1px solid var(--border2);flex-shrink:0;position:relative;opacity:0;animation:fade-left .8s ease forwards .5s;min-width:220px}
 .photo-wrap::after{content:'';position:absolute;inset:0;border-radius:20px;background:linear-gradient(135deg,rgba(124,111,247,0.1) 0%,transparent 60%)}
 .photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
@@ -195,7 +195,7 @@ textarea.form-input{resize:vertical;min-height:100px}
 
 footer{padding:32px 0;text-align:center;font-size:11px;color:var(--text4);font-family:'JetBrains Mono',monospace;letter-spacing:.04em;border-top:1px solid var(--border)}
 
-@media(max-width:720px){
+@media(max-width:560px){
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .photo-wrap{width:140px;height:170px;margin:0 auto}
   .metrics{grid-template-columns:repeat(3,1fr)}
@@ -435,14 +435,19 @@ footer{padding:32px 0;text-align:center;font-size:11px;color:var(--text4);font-f
     <div class="section-eyebrow reveal">education</div>
     <div class="edu-grid reveal">
       <div class="edu-card">
-        <div class="edu-degree">MS, Business Analytics (STEM)</div>
+        <div class="edu-degree">Master of Science, Business Analytics (STEM)</div>
         <div class="edu-school">Adelphi University</div>
-        <div class="edu-meta">Garden City, NY &middot; Aug 2024 &ndash; May 2026 &middot; GPA 3.5/4.0</div>
+        <div class="edu-meta">Garden City, NY &middot; Aug 2024 &ndash; May 2026</div>
+        <div class="edu-meta" style="margin-top:6px">GPA: 3.5/4.0 &middot; STEM-designated</div>
+        <div class="edu-meta" style="margin-top:6px;color:var(--text2)">Coursework: Python, SQL, Advanced ML, Applied Analytics, Database Systems, Statistical Methods</div>
       </div>
       <div class="edu-card">
-        <div class="edu-degree">BTech, Electronics &amp; Communication Engineering</div>
+        <div class="edu-degree">Bachelor of Technology, Electronics &amp; Communication Engineering</div>
         <div class="edu-school">Sri Venkateswara University</div>
-        <div class="edu-meta">India &middot; Aug 2017 &ndash; Jul 2021</div>
+        <div class="edu-meta">Tirupati, India &middot; Aug 2017 &ndash; Jul 2021</div>
+        <div class="edu-meta" style="margin-top:6px">GPA: 3.0/4.0</div>
+        <div class="edu-meta" style="margin-top:6px;color:var(--text2)">Coursework: Data Structures, Algorithms, Software Engineering, Database Management, OOP, System Design</div>
+        <div class="edu-meta" style="margin-top:6px;color:var(--accent2)">Started professional work from 3rd year (Aug 2019)</div>
       </div>
     </div>
   </section>
@@ -457,9 +462,12 @@ footer{padding:32px 0;text-align:center;font-size:11px;color:var(--text4);font-f
         </div>
         <div class="contact-links" style="margin-top:20px">
           <a href="mailto:yuvaraj24799@gmail.com" class="contact-link"><span class="contact-icon">✉</span>yuvaraj24799@gmail.com</a>
-          <a href="https://linkedin.com/in/yuvaraj-thatiparthi" class="contact-link" target="_blank"><span class="contact-icon">↗</span>linkedin.com/in/yuvaraj-thatiparthi</a>
-          <a href="https://github.com/yuvaraj24799" class="contact-link" target="_blank"><span class="contact-icon">↗</span>github.com/yuvaraj24799</a>
           <a href="tel:+15165226500" class="contact-link"><span class="contact-icon">✆</span>+1 (516) 522-6500</a>
+          <a href="https://linkedin.com/in/yuvaraj-thatiparthi" class="contact-link" target="_blank"><span class="contact-icon">in</span>linkedin.com/in/yuvaraj-thatiparthi</a>
+          <a href="https://github.com/yuvaraj24799" class="contact-link" target="_blank"><span class="contact-icon">↗</span>github.com/yuvaraj24799</a>
+          <a href="https://yuvaraj24799.github.io" class="contact-link" target="_blank"><span class="contact-icon">↗</span>yuvaraj24799.github.io</a>
+          <div class="contact-link" style="cursor:default"><span class="contact-icon">📍</span>Hicksville, New York — Open to relocation</div>
+          <div class="contact-link" style="cursor:default"><span class="contact-icon">🛂</span>F-1 OPT/EAD STEM &middot; Available July 10, 2026 &middot; H-1B required long-term</div>
         </div>
       </div>
       <div>
